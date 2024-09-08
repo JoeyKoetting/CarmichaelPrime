@@ -1,0 +1,47 @@
+
+## OFFICAL REPORT ##
+
+## Contain all info about Methods
+
+
+################################################################################
+# prime_test
+# Returns one of three values: 'prime', 'composite', or 'carmichael'
+
+
+################################################################################
+# mod_exp
+# Performs high number exponential modding
+# TIME COMPLEXITY TOTAL: ((n + 2 ^ m) * k where k is the number why which y / 2^k
+# # in which k makes y zero)
+# y / 2 : Right Shifts, O(n)
+# z ** 2 : Exponent, O(2 ^ m)
+# SPACE COMPLEXITY
+# y / 2 : Right Shifts, Uses one less bit
+# z ** 2 : Left Shifts, Uses one more bit
+
+################################################################################
+# probability
+# Returns the possibility of a number being prime after 'k' checks
+# TIME COMPLEXITY TOTAL : O(n + 2 ^ m)
+# 2 ** k : Exponent, O(2 ^ m)
+# 1 / (.....) : 1 / a number, Division, O(n)
+# SPACE COMPLEXITY
+# 2 ** k : Adds one bit to number by k times
+# 1 / (.....) : Right Shifts, Uses one less bit
+# DESCRIPTION:
+# A prime diagnosis using Fermats theorem guarantees a 50% chance of being actually true.
+# Therefore if we perform the Algorithim additional times we can decrease the chance by
+# an additional 50% of the previous prime validity percentage.
+# for example 1/2 -> 1/4 -> 1/8, Decreases 50% of the previous value
+
+
+################################################################################
+# is_carmichael
+# Determines whether a number is a carmichael or not
+# TIME COMPLEXITY TOTAL: O((n + 1) * k, where k is the number why which N / 2^k
+# in which k makes N zero or odd)
+# tempN % 2 : Checks last bit, O(1)
+# tempN / 2 : Right Shifts, O(n)
+# SPACE COMPLEXITY
+# tempN / 2 : Right Shifts, Uses one less bit
